@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+
+.row {
+    width: auto;
+    height: 100vh;
+    overflow-y: hidden;
+
+}
+
+img {
+    border-radius: 50%;
+    width: 50%;
+    height: 100%;
+
+}
+
+h4 {
+    text-shadow: 1px 1px 2px #B1B2FF, 0 0 25px #AAC4FF, 0 0 5px #D2DAFF;
+}
+
+div img {
+    width: auto;
+    height: 50vh;
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.4), 0 10px 50px 0 rgba(0, 0, 0, 0.3);
+}
+
+div h4 {
+    width: auto;
+    height: 40vh;
+    text-shadow: 1px 1px 2px #B1B2FF, 0 0 25px #AAC4FF, 0 0 5px #D2DAFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: white;
+}
+
+/*CONFIGUTRACION DEL BOTON*/
+/* From uiverse.io */
+button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
